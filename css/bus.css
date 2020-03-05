@@ -1,31 +1,30 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    height: 10vh;
+    font-weight: bolder;
+    background-color: #C4C4C4;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
-    height: 120%;
-}
-
-.title {
-    text-align: center;
-    padding: 20px 0px;
-    font-size: 25px;
-    font-weight: bolder;
-    background-color: #C4C4C4;
+    height: 90vh;
 }
 
 .bus {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 50vw;
     height: 100%;
     background-color: #AAA;
 }
@@ -33,33 +32,47 @@ html, body {
 .interior {
     display: flex;
     justify-content: space-between;
-    width: 227px;
-    height: 480px;
+    width: 45%;
+    height: 95%;
     background-color: #F1F1F1;
     border-top-left-radius: 70px;
     border-top-right-radius: 70px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 80px 10px 50px;
+    padding: 60px 10px 20px;
 }
 
 .banco {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
-    margin-left: 5px;
-    margin-bottom: 5px;
+    width: 40%;
+    height: 8%;
+    line-height: 8%;
+    margin-bottom: 2%;
+    font-size: 20px;
     background-color: #C4C4C4;
     cursor: pointer;
 }
 
-.left, .right {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100px;
-    height: auto;
+.banco:hover {
+    background-color: #E1E1E1;
 }
 
+.left, .right {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .interior {
+        width: 90%;
+    }
+
+    .banco {
+        font-size: 15px;
+    }
+}
