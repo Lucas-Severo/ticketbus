@@ -67,6 +67,48 @@
     height: 100%;
 }
 
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100%;
+}
+
+.info-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 60%;
+    height: 60%;
+    border: 1px solid black;
+    padding: 0 20px;
+}
+
+.info-field p {
+    align-self: flex-start;
+    font-size: 20px;
+    overflow: hidden;  
+}
+
+.submit {
+    width: 60%;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: rgba(144, 50, 20, 1);
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.submit:hover {
+    background-color: rgba(144, 50, 20, 0.9); 
+}
+
 @media (max-width: 768px) {
     .interior {
         width: 90%;
@@ -74,5 +116,10 @@
 
     .banco {
         font-size: 15px;
+    }
+
+    .info-field {
+        width: 100%;
+        height: 70%;
     }
 }

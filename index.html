@@ -16,22 +16,22 @@
                 <form class="form-container">
                     <div class="input-container">
                         <label for="nome">Nome</label>
-                        <input id="nome" type="text">
+                        <input id="nome" type="text" name="nome" required>
                     </div>
                     <div class="input-container">
                         <label for="origem">Origem</label>
-                        <select id="origem">
-                            <option value="1">Nova Andradina</option>
-                            <option value="2">Ivinhema</option>
-                            <option value="3">Batayporã</option>
+                        <select id="origem" name="origem" required>
+                            <option value="Nova Andradina">Nova Andradina</option>
+                            <option value="Ivinhema">Ivinhema</option>
+                            <option value="Batayporã">Batayporã</option>
                         </select>
                     </div>
                     <div class="input-container">
                         <label for="destino">Destino</label>
-                        <select id="destino">
-                            <option value="1">Nova Andradina</option>
-                            <option value="2">Ivinhema</option>
-                            <option value="3">Batayporã</option>
+                        <select id="destino" name="destino" required>
+                            <option value="Nova Andradina">Nova Andradina</option>
+                            <option value="Ivinhema">Ivinhema</option>
+                            <option value="Batayporã">Batayporã</option>
                         </select>
                     </div>
                     <button class="btn">Reservar</button>
@@ -39,5 +39,7 @@
             </div>
         </div>    
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
