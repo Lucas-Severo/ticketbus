@@ -84,7 +84,7 @@
     align-items: center;
     text-align: justify;
     width: 60%;
-    height: 60%;
+    height: 50%;
     border: 1px solid black;
     padding: 0 20px;
 }
@@ -109,6 +109,14 @@
 
 .submit:hover {
     background-color: rgba(144, 50, 20, 0.9); 
+}
+
+.selected { 
+    background-color: green;
+}
+
+.selected:hover {
+    background-color: darkgreen;
 }
 
 a {
