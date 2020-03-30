@@ -9,14 +9,18 @@ document.querySelector(".name").innerHTML = "Nome: " + sessionStorage.getItem("n
 document.querySelector(".origin").innerHTML = "Origem: " + sessionStorage.getItem("origin");
 document.querySelector(".destiny").innerHTML = "Destino: " + sessionStorage.getItem("destiny");
 
-// date
-const dateObject = new Date();
-document.querySelector(".date").innerHTML = "Data da reserva: " + 
-    `${dateObject.getDate()}/${dateObject.getMonth()}/${dateObject.getFullYear()}`;
+// time
+setInterval(function(){
+    const dateObject = new Date();
 
-// hour
-document.querySelector(".hour").innerHTML = "Horário: " + 
-    `${dateObject.getHours()}:${dateObject.getMinutes()}:${dateObject.getSeconds()}`;
+    // date
+    document.querySelector(".date").innerHTML = "Data da reserva: " + 
+    `${("0"+dateObject.getDate()).slice(-2)}/${("0"+(dateObject.getMonth() + 1)).slice(-2)}/${dateObject.getFullYear()}`;
+
+    // hour
+    document.querySelector(".hour").innerHTML = "Horário: " + 
+    `${("0"+dateObject.getHours()).slice(-2)}:${("0"+dateObject.getMinutes()).slice(-2)}:${("0"+dateObject.getSeconds()).slice(-2)}`;
+}, 1000);
     
 const seatInfo = document.querySelector(".seat");
 const seatElement = document.querySelectorAll(".banco");
