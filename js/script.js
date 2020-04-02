@@ -8,9 +8,15 @@ formElement.addEventListener("submit", function(ev){
     const origin = form.get("origem");
     const destiny = form.get("destino");
 
-    sessionStorage.setItem("name", name);
-    sessionStorage.setItem("origin", origin);
-    sessionStorage.setItem("destiny", destiny);
+    if(origin != destiny) {
+        sessionStorage.setItem("name", name);
+        sessionStorage.setItem("origin", origin);
+        sessionStorage.setItem("destiny", destiny);
+        window.location.assign("bus.html");
+    } else {
+        const result = document.querySelector("#result");
+        result.style.display = "Flex";
 
-    window.location.assign("bus.html");
+        setTimeout(() => {result.style.display = "None"}, 2000);
+    }
 });
